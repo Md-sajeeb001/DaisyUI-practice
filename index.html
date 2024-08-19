@@ -21,5 +21,50 @@
      <button class="btn btn-active hover:bg-red-500 font-semibold text-xl">click me</button>
      <button class="btn btn-disabled hover:bg-red-500 font-semibold text-xl">click me</button>
      <button class="btn bg-white btn-circle inline-block w-52 h-32 glass font-semibold text-xl">click me</button>
+
+     <!-- ===============dropdown=========== -->
+     <details class="dropdown">
+        <summary class="btn m-1 bg-cyan-500 hover:bg-cyan-500  text-lg text-white outline only:">open or close</summary>
+        <ul class="menu dropdown-content text-xl text-cyan-500 bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+          <li><a>Item 1</a></li>
+          <li><a>Item 2</a></li>
+        </ul>
+      </details>
+
+
+      <div class="navbar bg-base-300 rounded-box">
+        <div class="flex-1 px-2 lg:flex-none">
+          <a class="text-lg font-bold">daisyUI</a>
+        </div>
+        <div class="flex flex-1 justify-end px-8">
+          <div class="flex items-stretch">
+            <a class="btn btn-ghost rounded-btn">Button</a>
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Dropdown</div>
+              <ul
+                tabindex="0"
+                class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
+                <li><a href="https://tailwindcss.com/docs/font-size">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open the modal using ID.showModal() method -->
+<button class="btn text-red-500" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal bg-black">
+  <div class="modal-box bg-cyan-300 w-32 ">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 </body>
 </html>
